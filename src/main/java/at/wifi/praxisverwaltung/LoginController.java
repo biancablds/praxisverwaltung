@@ -28,11 +28,11 @@ public class LoginController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/at/wifi/praxisverwaltung/dashboard.fxml"));
         Stage stage = new Stage();
 
-        Scene dashboard = new Scene(loader.load(),320,240);
+        Scene dashboard = new Scene(loader.load());
         DashboardController dashboardController = loader.getController();
 
         stage.setScene(dashboard);
+        stage.setMaximized(true);
         stage.show();
-
     }
 }
