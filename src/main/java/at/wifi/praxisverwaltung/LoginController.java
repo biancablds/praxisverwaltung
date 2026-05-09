@@ -1,10 +1,14 @@
 package at.wifi.praxisverwaltung;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginController {
     @FXML
@@ -16,13 +20,19 @@ public class LoginController {
     @FXML
     public Button loginButton;
     @FXML
-    private Label welcomeText;
+    public Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    public void onLoginButtonClick() throws IOException {
 
-    public void onLoginButtonClick(ActionEvent actionEvent) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/at/wifi/praxisverwaltung/dashboard.fxml"));
+        Stage stage = new Stage();
+
+        Scene dashboard = new Scene(loader.load(),320,240);
+        DashboardController dashboardController = loader.getController();
+
+        stage.setScene(dashboard);
+        stage.show();
+
     }
 }
