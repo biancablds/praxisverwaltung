@@ -9,14 +9,41 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="dashboardWelcome" text="Dashboard" textFill="#ff00c3">
+    <Label fx:id="dashboardWelcome" text="Terminübersicht" textFill="#ff00c3">
       <font>
          <Font name="JetBrains Mono Light" size="36.0" />
       </font></Label>
-   <Label fx:id="loginText" layoutX="30.0" layoutY="75.0" text="Bitte geben Sie ihre Daten ein um sich anzumelden." textFill="#480137">
+   <Label fx:id="loginText" layoutX="30.0" layoutY="75.0" text="Folgende Termine stehen für heute an:" textFill="#480137">
       <font>
          <Font name="JetBrains Mono Light" size="14.0" />
       </font>
    </Label>
+    <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FBD6FF;">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Button fx:id="dashboardPatientButton" alignment="CENTER" mnemonicParsing="false" onAction="#onDashboardPatientButtonClick" style="-fx-background-color: #ff00c3;" text="Patienten" textFill="#fbd6ff">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button fx:id="dashboardAppointmentButton" mnemonicParsing="false" onAction="#onDashboardAppointmentButtonClick" style="-fx-background-color: #ff00c3;" text="Termine" textFill="#fbd6ff">
+                <VBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </VBox.margin>
+            <font>
+               <Font size="16.0" />
+            </font>
+            </Button>
+            <Button fx:id="dashboardPharmacyButton" mnemonicParsing="false" onAction="#onDashboardPharmacyButtonClick" style="-fx-background-color: #ff00c3;" text="Hausapotheke" textFill="#fbd6ff">
+                <VBox.margin>
+                    <Insets bottom="20.0" />
+                </VBox.margin>
+            <font>
+               <Font size="16.0" />
+            </font>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: #ff00c3;" text="Meine Daten" textFill="#fbd6ff">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+        </VBox>
+    </SplitPane>
 </VBox>

@@ -12,4 +12,16 @@ public class DashboardController {
 
     @FXML
     public Label dashboardWelcome;
+    public Button dashboardPatientButton;
+    public Button dashboardAppointmentButton;
+    public Button dashboardPharmacyButton;
+
+    public void onDashboardAppointmentButtonClick(ActionEvent actionEvent) {
+    }
+
+    public void onDashboardPatientButtonClick(ActionEvent actionEvent) {
+    }
+
+    public void onDashboardPharmacyButtonClick(ActionEvent actionEvent) {
+    }
 }
