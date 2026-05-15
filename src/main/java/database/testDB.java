@@ -6,9 +6,9 @@ import java.sql.SQLException;
 public class testDB {
     public static void main(String[] args) {
         try (Connection con = DBManager.getConnection()) {
-            System.out.println("✅ MariaDB Verbindung erfolgreich!");
+            System.out.println("MariaDB Verbindung erfolgreich!");
         } catch (SQLException e) {
-            System.out.println("❌ Verbindung fehlgeschlagen");
+            System.out.println("Verbindung fehlgeschlagen");
             e.printStackTrace();
         }
     }
