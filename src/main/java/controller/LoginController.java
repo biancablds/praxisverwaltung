@@ -7,10 +7,7 @@ import java.sql.ResultSet;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,18 +23,6 @@ public class LoginController {
     public Label welcomeText;
     public PasswordField passwordField;
 
-//    @FXML
-//    public void onLoginButtonClick() throws IOException {
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dashboard.fxml"));
-//        Stage stage = new Stage();
-//
-//        Scene dashboard = new Scene(loader.load());
-//        DashboardController dashboardController = loader.getController();
-//
-//        stage.setScene(dashboard);
-//        stage.setMaximized(true);
-//        stage.show();
-//    }
     @FXML
     public void onLoginButtonClick() throws IOException {
 
@@ -54,8 +39,11 @@ public class LoginController {
             stage.show();
 
         } else {
-            welcomeText.setText("Benutzername oder Passwort falsch!");
-            welcomeText.setTextFill(javafx.scene.paint.Color.RED);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login fehlgeschlagen");
+            alert.setHeaderText(null);
+            alert.setContentText("Benutzername oder Passwort ist falsch.");
+            alert.showAndWait();
         }
     }
 
