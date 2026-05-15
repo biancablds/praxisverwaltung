@@ -1,4 +1,4 @@
-package at.wifi.praxisverwaltung;
+package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +25,7 @@ public class LoginController {
     @FXML
     public void onLoginButtonClick() throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/at/wifi/praxisverwaltung/dashboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dashboard.fxml"));
         Stage stage = new Stage();
 
         Scene dashboard = new Scene(loader.load());

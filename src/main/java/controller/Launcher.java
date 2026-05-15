@@ -1,4 +1,4 @@
-package at.wifi.praxisverwaltung;
+package controller;
 
 import javafx.application.Application;
 

@@ -4,6 +4,6 @@ module at.wifi.praxisverwaltung.praxisverwaltung {
     requires java.sql;
 
 
-    opens at.wifi.praxisverwaltung to javafx.fxml;
-    exports at.wifi.praxisverwaltung;
+    opens controller to javafx.fxml;
+    exports controller;
 }

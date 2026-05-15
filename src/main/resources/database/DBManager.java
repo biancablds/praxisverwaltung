@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class dbManager {
 
-    static final String DB_URL = "jdbc:mariadb://localhost:3306/";
+    static final String DB_URL = "jdbc:mariadb://localhost:3306";
     static final String DB_USER = "root";
-    static final String DB_PASSWORD = "";
+    static final String DB_PASSWORD = "root";
 
     protected Connection connection = null;
 

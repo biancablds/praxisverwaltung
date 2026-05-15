@@ -1,4 +1,4 @@
-package at.wifi.praxisverwaltung;
+package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
