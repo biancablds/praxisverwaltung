@@ -19,7 +19,6 @@ public class HelloApplication extends Application {
         stage.getIcons().add(
                 new Image(getClass().getResourceAsStream("/pictures/logo-ausgeschnitten.png"))
         );
-
         stage.show();
     }
 }
