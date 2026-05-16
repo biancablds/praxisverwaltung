@@ -31,12 +31,11 @@ public class LoginController {
         String password = passwordField.getText();
 
         if (authenticate(username, password)) {
-            FXMLLoader loader =
-                    new FXMLLoader(getClass().getResource("/views/overview.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/overview.fxml"));
 
             Stage stage = (Stage) loginButton.getScene().getWindow();
             Scene overviewScene = new Scene(loader.load());
-            overviewScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/overview.css")).toExternalForm());
+            //overviewScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/styles.css")).toExternalForm());
             stage.setScene(overviewScene);
             stage.setMaximized(true);
             stage.show();

@@ -2,9 +2,10 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FBD6FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OverviewController">
-    <MenuBar styleClass="main-overview">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: FBD6FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OverviewController">
+    <MenuBar >
         <Menu fx:id="overviewMenuBar" mnemonicParsing="false" onAction="#onOverviewMenuBarClick" text="Übersicht">
         </Menu>
         <Menu fx:id="appointmentsMenuBar" mnemonicParsing="false" onAction="#onAppointmentsMenuBarClick" text="Termine">
@@ -16,6 +17,26 @@
         <Menu fx:id="mydataMenuBar" mnemonicParsing="false" onAction="#onMyDataMenuBar" text="Meine Daten">
         </Menu>
     </MenuBar>
-    <Label text="Tagesübersicht" />
-    <HBox prefHeight="100.0" prefWidth="200.0" />
+    <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="49.0" prefWidth="633.0" text="Tagesübersicht" textFill="#ff00c3">
+      <font>
+         <Font name="JetBrains Mono Regular" size="36.0" />
+      </font></Label>
+    <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+        <VBox prefHeight="311.0" prefWidth="273.0">
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="311.0" text="Termine (heute)">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <ListView prefHeight="200.0" prefWidth="200.0"/>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="306.0" text="Dein Tag">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <ListView prefHeight="200.0" prefWidth="200.0"/>
+        </VBox>
+    </SplitPane>
 </VBox>

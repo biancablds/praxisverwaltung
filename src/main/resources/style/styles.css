@@ -3,6 +3,6 @@
 }
 
 
-.main-overview .menu {
-    -fx-text-fill: white;
+.main-overview .Menu text {
+    -fx-text-fill: #fbd6ff;
 }
