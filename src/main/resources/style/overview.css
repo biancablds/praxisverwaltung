@@ -1,0 +1,8 @@
+.main-overview {
+    -fx-background-color: #ff00c3;
+}
+
+
+.main-overview .menu {
+    -fx-text-fill: white;
+}

@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController {
     @FXML
@@ -31,10 +32,12 @@ public class LoginController {
 
         if (authenticate(username, password)) {
             FXMLLoader loader =
-                    new FXMLLoader(getClass().getResource("/views/dashboard.fxml"));
+                    new FXMLLoader(getClass().getResource("/views/overview.fxml"));
 
             Stage stage = (Stage) loginButton.getScene().getWindow();
-            stage.setScene(new Scene(loader.load()));
+            Scene overviewScene = new Scene(loader.load());
+            overviewScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/overview.css")).toExternalForm());
+            stage.setScene(overviewScene);
             stage.setMaximized(true);
             stage.show();
 

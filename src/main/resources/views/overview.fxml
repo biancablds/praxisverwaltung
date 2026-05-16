@@ -3,38 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FBD6FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <MenuBar style="-fx-background-color: FF00C3;">
-        <menus>
-          <Menu mnemonicParsing="false" text="Übersicht">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Termine">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Patienten">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Hausapotheke">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Meine Daten">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-      <Label text="Tagesübersicht" />
-      <HBox prefHeight="100.0" prefWidth="200.0" />
-   </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FBD6FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OverviewController">
+    <MenuBar styleClass="main-overview">
+        <Menu fx:id="overviewMenuBar" mnemonicParsing="false" onAction="#onOverviewMenuBarClick" text="Übersicht">
+        </Menu>
+        <Menu fx:id="appointmentsMenuBar" mnemonicParsing="false" onAction="#onAppointmentsMenuBarClick" text="Termine">
+        </Menu>
+        <Menu fx:id="patientsMenuBar" mnemonicParsing="false" text="Patienten">
+        </Menu>
+        <Menu fx:id="pharmacyMenuBar" mnemonicParsing="false" onAction="#onPharmacyMenuBarClick" text="Hausapotheke">
+        </Menu>
+        <Menu fx:id="mydataMenuBar" mnemonicParsing="false" onAction="#onMyDataMenuBar" text="Meine Daten">
+        </Menu>
+    </MenuBar>
+    <Label text="Tagesübersicht" />
+    <HBox prefHeight="100.0" prefWidth="200.0" />
 </VBox>
